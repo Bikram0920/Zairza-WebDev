@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient(40deg,yellow,blue);
+            position: relative;
+            z-index: 1;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        .line{
+            padding: 10px;
+        }
+        .top{
+            padding: 10px;
+            font-size: x-large;
+            color: azure;
+        }
+        .sec{
+            width: 27%;
+            background-image: linear-gradient(40deg,teal,magenta);
+            margin:10px 30vw 10px 37vw;
+            border: #000;
+            text-align: left;
+            font-size: 18px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+        p{
+            margin: 10px 9px 7px;
+            padding: 4px;
+        }
+        .t{
+            padding-top: 25px;
+        }
+        .box{
+            padding: 3px;
+            margin: 6px 10px;
+            background: rgb(231, 224, 224);
+            border-radius: 5px;
+            width: 88%;
+            height: 5vh;
+            color: black;
+        }
+        select{
+            padding: 3px;
+            margin: 6px 10px;
+            background: rgb(231, 224, 224);
+            border-radius: 5px;
+            width: 91%;
+            height: 6vh;
+            color: rgb(3, 3, 3);
+        }
+        .area{
+            padding: 3px;
+            margin: 6px 10px;
+            background: rgb(231, 224, 224);
+            border-radius: 5px;
+            width: 88%;
+            color: rgb(13, 13, 13);
+        }
+        .opt{
+            margin: 7px 13px;
+            padding: 4px;
+        }
+        .but{
+            height: 40px;
+            margin: 7px 10px 23px;
+            width: 65px;
+            color: white;
+            font-weight: lighter;
+            background: #049b54;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="top">
+            <h2>Survey Form</h2>
+            <div class="line"><i>Thank you for taking the time to help us improve the platform.</i></div>
+        </header>
+        <div class="sec">
+            <form action="form.php">
+                <p class="t">What is your name?</p>
+                <input type="text" class="box" placeholder="Enter your name">
+                <p>What is your email address?</p>
+                <input type="text" class="box" placeholder="Enter your Email address">
+                <p>What is your age?</p>
+                <input type="text" class="box" placeholder="Enter your age">
+                <p>Which option best describes your current role?</p>
+                <select name="role" id="current">
+                    <option value="student">Student</option>
+                    <option value="Part Time Job">Part Time Job</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Freelance">Freelance</option>
+                </select>
+                <p>Would you recommend [Company Name] to a friend?</p>
+                <input type="radio" name="action" value="Definitely" class="opt">Definitely <br>
+                <input type="radio" name="action" value="Maybe" class="opt">Maybe <br>
+                <input type="radio" name="action" value="Not sure" class="opt">Not Sure <br>
+                <p>Would you like to see improved?<br>(Check all that apply)</p>
+                <input type="checkbox" class="opt">Front-end projects <br>
+                <input type="checkbox" class="opt">Back-end projects <br> 
+                <input type="checkbox" class="opt">Challenges <br>
+                <p>Any comments or suggestions?</p>
+                <textarea name="xyz" id="abc" class="area" cols="30" rows="10" placeholder="Enter Your Comments Here..."></textarea>
+                <button type="submit" value="submit" class="but">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
